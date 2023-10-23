@@ -1,0 +1,86 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blueprint to PDF</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add any necessary CSS styles -->
+</head>
+
+<body>
+    <div class="container">
+        <div id="page1" class="form-container">
+            <h1>Desain Spesifikasi Mesin IPAL</h1>
+            <!-- Your UI for blueprint input and other controls here -->
+            <label for="volumeSelect">Masukkan Volume:</label>
+            <select id="volumeSelect" style="width: 200px; height: 38px;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <button type="button" id="processValue">Lihat Spesifikasi</button>
+        </div>
+        <div id="loadingAnimation" class="loading hidden">
+            <div class="spinner"></div>
+        </div>
+        <div id="page2" class="page hidden">
+            <h1>Hasil Desain</h1>
+            <!-- <img src="img/ipal-biofilter.png" alt=""> -->
+            <div style="background-color: #e3e3e3; border-radius: 5px;">
+                <img src="img/Gambar_desain_aplikasi_3d.png" alt="">
+            </div>
+            <!--             <p>Diameter: <span id="diameterSpan"></span></p>
+            <p>p1: <span id="p1Span"></span> cm</p>
+            <p>p2: <span id="p2Span"></span> cm</p>
+            <p>p3: <span id="p3Span"></span> cm</p>
+            <p>p4: <span id="p4Span"></span> cm</p>
+            <h2>ST: <span id="stSpan"></span> &#x33A4;</h2>
+            <p>MH: <span id="mhSpan"></span></p>
+            <p>Pi: <span id="piSpan"></span></p> -->
+            <br /><br /><br />
+            <table>
+                <tr>
+                    <th>Jenis Mesin</th>
+                    <td>JSSS-098</td>
+                </tr>
+                <tr>
+                    <th>Panjang Mesin</th>
+                    <td id="widthValue"></td>
+                </tr>
+                <tr>
+                    <th>Diameter Mesin</th>
+                    <td id="diameterValue"></td>
+                </tr>
+                <tr>
+                    <th>ST</th>
+                    <td id="stValue"></td>
+                </tr>
+            </table>
+            <br /><br />
+            <br />
+            <button id="resetButton">Desain Ulang</button>
+            <button id="printToPdfButton" class="btn-green">Unduh Detail Spesifikasi</button>
+            <!-- <button type="button" onclick="gotoPage1()">Back</button>
+            <button type="button" onclick="generateBlueprintJsPDF()">Print PDF</button> -->
+        </div>
+
+    </div>
+
+
+
+    <!-- Add the pdf-lib library -->
+    <!-- <script src="js/pdf-lib.min.js"></script> -->
+    <!--     <script src="js/jspdf.umd.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="js/app.js"></script> <!-- Your JavaScript file -->
+</body>
+
+</html>
