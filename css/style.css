@@ -79,9 +79,14 @@ h1 {
     padding-left: 10px;
     padding-right: 10px;
 }
+
 .notification > ol {
     text-align: justify;
     padding-right: 15px;
+}
+
+.notification > p, .notification > ol {
+    line-height: 1.6;
 }
 label {
     padding: 10px;
