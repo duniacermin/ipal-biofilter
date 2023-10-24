@@ -26,67 +26,70 @@ async function processValue() {
     if (volume === 1) {
       machineName = "BF-01";
       volumeDesign = (volume * 1.15).toFixed(2);
-      width = 1.3;
+      width = 1.7;
       mh = 30;
       pi = 1;
     } else if (volume === 2) {
       machineName = "BF-02";
-      volumeDesign = (volume * 2.3).toFixed(2);
-      width = 1.7;
+      volumeDesign = (volume * 1.15).toFixed(2);
+      width = 2;
       mh = 30;
       pi = 1;
     } else if (volume === 3) {
       machineName = "BF-03";
-      volumeDesign = (volume * 3.45).toFixed(2);
-      width = 2.2;
+      volumeDesign = (volume * 1.15).toFixed(2);
+      width = 2.3;
       mh = 30;
       pi = 1.5;
       console.log(machineName);
     } else if (volume === 4) {
       machineName = "BF-04";
-      volumeDesign = (volume * 4.6).toFixed(2);
-      width = 2.6;
+      volumeDesign = (volume * 1.15).toFixed(2);
+      width = 2.9;
       mh = 30;
       pi = 1.5;
     } else if (volume === 5) {
       machineName = "BF-05";
-      volumeDesign = (volume * 5.75).toFixed(2);
-      width = 2.9;
+      volumeDesign = (volume * 1.15).toFixed(2);
+      width = 3.5;
       mh = 30;
       pi = 2;
     } else if (volume === 6) {
       machineName = "BF-06";
-      volumeDesign = (volume * 6.9).toFixed(2);
-      width = 3.5;
+      volumeDesign = (volume * 1.15).toFixed(2);
+      width = 3.7;
       mh = 60;
       pi = 2;
     } else if (volume === 7) {
       machineName = "BF-07";
-      volumeDesign = (volume * 8.05).toFixed(2);
-      width = 3.6;
+      volumeDesign = (volume * 1.15).toFixed(2);
+      width = 4;
       mh = 60;
       pi = 2.5;
     } else if (volume === 8) {
       machineName = "BF-08";
-      volumeDesign = (volume * 9.2).toFixed(2);
-      width = 4;
+      volumeDesign = (volume * 1.15).toFixed(2);
+      width = 4.6;
       mh = 60;
       pi = 2.5;
     } else if (volume === 9) {
       machineName = "BF-09";
-      volumeDesign = (volume * 10.35).toFixed(2);
-      width = 4.4;
+      volumeDesign = (volume * 1.15).toFixed(2);
+      width = 5.2;
       mh = 60;
       pi = 3;
     } else if (volume === 10) {
       machineName = "BF-10";
-      volumeDesign = (volume * 11.5).toFixed(2);
-      width = 4.6;
+      volumeDesign = (volume * 1.15).toFixed(2);
+      width = 4.5;
       mh = 60;
       pi = 3;
     }
 
     diameter = Math.sqrt((4 * volumeDesign) / (3.14 * width)).toFixed(2);
+    console.log("Volume Design" + volumeDesign);
+    console.log("Width " + width);
+    console.log("Diameter "+ diameter);
     p1 = (0.1 * width).toFixed(2);
     p2 = (0.4 * width).toFixed(2);
     p3 = (0.4 * width).toFixed(2);
@@ -159,8 +162,8 @@ function generateBlueprintJsPDF() {
 
     // Add the rotated machine image to the first page of the PDF
     // doc.addImage(rotatedImageDataURL, 'JPEG', 20, 20, 555.276, 801.890);
-    doc.text(40, 20, `Detail Spesifikasi Mesin IPAL`);
-    doc.text(40, 40, `Jenis Mesin: ${machineName}`);
+    doc.text(40, 20, `Detail Spesifikasi Peralatan IPAL`);
+    doc.text(40, 40, `Kode Peralatan: ${machineName}`);
     // Add the machine image to the PDF
     doc.addImage(machineImg, 'JPEG', 20, 180.000,  555.276, 401.890, null, 180); // x, y, width, height
     // doc.setTextColor("#ffffff");
