@@ -66,8 +66,61 @@ h1 {
     margin-bottom: 10px;
 }
 
+.notification {
+    max-width: 650px;
+    min-height: 150px;
+    background-color: #e1efff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+.notification > p {
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.notification > ol {
+    text-align: justify;
+    padding-right: 15px;
+}
 label {
+    padding: 10px;
     font-weight: bold;
+}
+
+.label
+{
+    width: 200px;
+    padding: 10px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container > label {
+    width: 200px;
+    text-align: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.flex-container > span {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.flex-container > select {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.flex-container > button {
+    height: 100%;
+    margin-top: 10px;
 }
 
 input {

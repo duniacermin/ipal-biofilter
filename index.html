@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Blueprint to PDF</title>
+    <title>Desain Pengolahan Air Limbah AF2B</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Add any necessary CSS styles -->
 </head>
@@ -13,20 +13,37 @@
         <div id="page1" class="form-container">
             <h1>Desain Pengolahan Air Limbah AF2B</h1>
             <!-- Your UI for blueprint input and other controls here -->
-            <label for="volumeSelect">Masukkan Volume:</label>
-            <select id="volumeSelect" style="width: 200px; height: 38px;">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            <button type="button" id="processValue">Lihat Spesifikasi</button>
+            <div class="notification">
+                <p>AF2B adalah jenis reaktor dalam sistem pengolahan air yang berisi media filter yang memiliki luas permukaan sehingga proses pencemaran oleh mikroorganisme dapat ditingkatkan. 
+                    Sistem ini dapat digunakan untuk mendesain peralatan yang digunakan dalam pengolahan air limbah AF2B</p>
+                <p>
+                <p>
+                    Cara melihat spesifikasi dari peralatan yang dibutuhkan menggunakan sistem ini adalah sebagai berikut
+                </p>
+                <ol>
+                    <li>Masukkan Volume Limbah yang Diolah. Pilih volume limbah yang di-inginkan, volume yang dapat dipilih antara 1-10 m3. </li>
+                    <li>Tekan tombol "Hitung Spesifikasi" dibawah. </li>
+                    <li>Spesifikasi peralatan yang dibutuhkan akan ditampilkan oleh sistem. Tekan tombol "Unduh Detail Spesifikasi" untuk melihat detail spesifikasi lebih lanjut </li>
+                </ol>
+            </div>
+            <br />
+            <div class="flex-container">
+                <label for="volumeSelect">Masukan Volume Limbah yang Diolah (m3)</label>
+                <span>:</span>
+                <select id="volumeSelect" style="width: 200px; height: 38px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="button" id="processValue">Hitung Spesifikasi</button>
+            </div>       
         </div>
         <div id="loadingAnimation" class="loading hidden">
             <div class="spinner"></div>
@@ -60,7 +77,7 @@
                     <td id="diameterValue"></td>
                 </tr>
                 <tr>
-                    <th>Sarang Tawon (m2)</th>
+                    <th>Sarang Tawon (m3)</th>
                     <td id="stValue"></td>
                 </tr>
             </table>
